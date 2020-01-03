@@ -1,0 +1,14 @@
+<section class="mat-typography mat-app-background app-frame" fxLayout="column">
+	<mat-toolbar color="primary">
+		<button mat-icon-button (click)="sidepanel.toggleState()">
+      <mat-icon>menu</mat-icon>
+    </button>
+		<span fxFlex>{{app.title | async}}</span>
+	</mat-toolbar>
+	<div class="app-body mat-app-background" fxFlex fxFill fxLayout="row" fxLayoutAlign="start stretch">
+		<sidepanel></sidepanel>
+		<div fxFlex class="app-panel">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</section>
